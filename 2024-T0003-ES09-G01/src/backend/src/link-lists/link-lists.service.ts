@@ -29,7 +29,7 @@ export class LinkListsService {
     this.validateFileType(file);
     const csvData = this.readCSVFile(file.path);
     const parsedCsv = this.parseCSV(csvData);
-    this.validateCSV(parsedCsv);
+    // this.validateCSV(parsedCsv);
 
     const createdCsvEntities = await this.saveCSVData(parsedCsv);
 
